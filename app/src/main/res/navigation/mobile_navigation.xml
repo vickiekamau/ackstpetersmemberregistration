@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_addMember"
+        android:name="com.ack.stpeters.addmembers.AddMemberOne"
+        android:label="Personal Information"
+        tools:layout="@layout/fragment_add_member_one" >
+
+        <action
+            android:id="@+id/action_navigation_addMember_to_navigation_addMemberTwo"
+            app:destination="@id/navigation_addMemberTwo" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_addMemberTwo"
+        android:name="com.ack.stpeters.addmembers.AddMemberTwo"
+        android:label="Church Information"
+        tools:layout="@layout/fragment_add_member_two" >
+
+        <action
+            android:id="@+id/action_navigation_addMemberTwo_to_navigation_addMemberThree"
+            app:destination="@id/navigation_addMemberThree" />
+        <argument
+            android:name="fname"
+            app:argType="string" />
+        <argument
+            android:name="surname"
+            app:argType="string" />
+        <argument
+            android:name="othername"
+            app:argType="string" />
+        <argument
+            android:name="gender"
+            app:argType="string" />
+        <argument
+            android:name="marital_status"
+            app:argType="string" />
+        <argument
+            android:name="children"
+            app:argType="string" />
+        <argument
+            android:name="dob"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_addMemberThree"
+        android:name="com.ack.stpeters.addmembers.AddMemberThree"
+        android:label="Career Information"
+        tools:layout="@layout/fragment_add_member_three" >
+        <argument
+            android:name="fname"
+            app:argType="string" />
+        <argument
+            android:name="surname"
+            app:argType="string" />
+        <argument
+            android:name="other_name"
+            app:argType="string" />
+        <argument
+            android:name="gender"
+            app:argType="string" />
+        <argument
+            android:name="marital_status"
+            app:argType="string" />
+        <argument
+            android:name="children"
+            app:argType="string" />
+        <argument
+            android:name="dob"
+            app:argType="string" />
+        <argument
+            android:name="baptized"
+            app:argType="string" />
+        <argument
+            android:name="confirmed"
+            app:argType="string" />
+        <argument
+            android:name="cell_group"
+            app:argType="string" />
+        <argument
+            android:name="service"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.ack.stpeters.home.Home"
+        android:label="Member Registration"
+        tools:layout="@layout/fragment_home" >
+
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_addMember"
+            app:destination="@id/navigation_addMember" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.ack.stpeters.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>

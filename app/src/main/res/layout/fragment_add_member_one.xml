@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:fillViewport="true"
+android:scrollbarSize="0dp"
+android:scrollbars="vertical"
+app:layout_behavior="@string/appbar_scrolling_view_behavior"
+tools:context=".addmembers.AddMemberOne">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="@dimen/layout_margin"
+        android:layout_marginEnd="@dimen/layout_margin"
+        android:hint="@string/first_name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fName_Input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textColor="@android:color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/surname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/fName"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="@dimen/layout_margin"
+        android:layout_marginEnd="@dimen/layout_margin"
+        android:hint="@string/surname">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/surname_Input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textColor="@android:color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/other_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/surname"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="@dimen/layout_margin"
+        android:layout_marginEnd="@dimen/layout_margin"
+        android:hint="@string/other_names">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/other_name_Input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textColor="@android:color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/gender_layout"
+        style="@style/Theme.ACK.TextInputLayout.Outline.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="@dimen/layout_margin"
+        android:layout_marginEnd="@dimen/layout_margin"
+        app:layout_constraintTop_toBottomOf="@id/other_name">
+
+        <AutoCompleteTextView
+            android:id="@+id/genderAutoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="@string/select_gender"
+            android:inputType="none"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/marital_layout"
+        style="@style/Theme.ACK.TextInputLayout.Outline.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="@dimen/layout_margin"
+        android:layout_marginEnd="@dimen/layout_margin"
+        app:layout_constraintTop_toBottomOf="@id/gender_layout">
+
+        <AutoCompleteTextView
+            android:id="@+id/maritalAutoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="@string/marital_status"
+            android:inputType="none"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/children"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/marital_layout"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="@dimen/layout_margin"
+        android:layout_marginEnd="@dimen/layout_margin"
+        android:hint="@string/number_of_children">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/children_Input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textColor="@android:color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/children"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="@dimen/layout_margin"
+        android:layout_marginEnd="@dimen/layout_margin"
+        android:hint="@string/select_date_of_birth"
+        app:endIconDrawable="@drawable/ic_date_picker"
+        app:endIconContentDescription="@string/date_picker_icon"
+        app:endIconMode="custom">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dob_Input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textColor="@android:color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dob"
+        android:text="@string/next"
+        android:layout_marginStart="@dimen/layout_margin"
+        android:layout_marginEnd="@dimen/layout_margin"
+        android:layout_marginTop="10dp"/>
+
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

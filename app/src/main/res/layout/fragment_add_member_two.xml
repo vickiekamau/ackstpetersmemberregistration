@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbarSize="0dp"
+    android:scrollbars="vertical"
+    android:theme="@style/Theme.ACK.Main"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".addmembers.AddMemberTwo">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:theme="@style/Theme.ACK.Main">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/baptized_layout"
+            style="@style/Theme.ACK.TextInputLayout.Outline.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/layout_margin"
+            android:layout_marginEnd="@dimen/layout_margin"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <AutoCompleteTextView
+                android:id="@+id/baptizedAutoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="@string/are_you_baptized"
+                android:inputType="none"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/confirmed_layout"
+            style="@style/Theme.ACK.TextInputLayout.Outline.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="@dimen/layout_margin"
+            android:layout_marginEnd="@dimen/layout_margin"
+            app:layout_constraintTop_toBottomOf="@id/baptized_layout">
+
+            <AutoCompleteTextView
+                android:id="@+id/confirmedAutoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="@string/are_you_confirmed"
+                android:inputType="none"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cell_layout"
+        style="@style/Theme.ACK.TextInputLayout.Outline.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="@dimen/layout_margin"
+        android:layout_marginEnd="@dimen/layout_margin"
+        app:layout_constraintTop_toBottomOf="@id/confirmed_layout">
+
+    <AutoCompleteTextView
+        android:id="@+id/cellAutoCompleteTextView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:hint="@string/select_cell_group"
+        android:inputType="none"
+        android:textColor="@color/black" />
+     </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/service_layout"
+        style="@style/Theme.ACK.TextInputLayout.Outline.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="@dimen/layout_margin"
+        android:layout_marginEnd="@dimen/layout_margin"
+        app:layout_constraintTop_toBottomOf="@id/cell_layout">
+
+    <AutoCompleteTextView
+        android:id="@+id/serviceAutoCompleteTextView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:hint="@string/select_service"
+        android:inputType="none"
+        android:textColor="@color/black" />
+     </com.google.android.material.textfield.TextInputLayout>
+
+     <com.google.android.material.button.MaterialButton
+            android:id="@+id/next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/service_layout"
+            android:text="@string/next"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="@dimen/layout_margin"
+            android:layout_marginEnd="@dimen/layout_margin"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

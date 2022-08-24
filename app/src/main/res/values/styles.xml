@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.ACK.TextInputLayout.Outline.ExposedDropdownMenu" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary_600</item>
+        <item name="colorPrimaryVariant">@color/primary_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/tertiary_800</item>
+        <item name="colorSecondaryVariant">@color/tertiary_900</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Other colors-->
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/color_on_error</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="strokeColor">@color/tertiary_50</item>
+        <item name="boxBackgroundColor">@color/tertiary_50</item>
+        <item name="android:textColorHint">@color/black</item>
+        <item name="endIconTint">@color/black</item>
+    </style>
+
+    <style name="Theme.ACK.TextInputLayout.Outline" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorSecondaryVariant">@color/secondary_600</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Other colors-->
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/color_on_error</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="strokeColor">@color/tertiary_50</item>
+        <item name="boxBackgroundColor">@color/tertiary_50</item>
+        <item name="android:textColorHint">@color/black</item>
+        <item name="endIconTint">@color/primary_800</item>
+    </style>
+
+    <style name="Theme.ACK.TextInputLayout.Outline.Dialog" parent="Theme.ACK.TextInputLayout.Outline">
+        <item name="colorPrimary">@color/text_color</item>
+        <item name="colorPrimaryVariant">@color/text_color</item>
+        <item name="colorOnPrimary">@color/text_color</item>
+    </style>
+
+
+    <style name="Theme.ACK.InputLayout.Layout" parent="Theme.MaterialComponents.Light">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#5B1400</item>
+        <item name="colorSecondaryVariant">#490E00</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/color_on_error</item>
+
+        <item name="backgroundColor">@color/card_color</item>
+        <item name="android:textColorHint">@color/primary_800</item>
+        <item name="endIconTint">@color/primary_800</item>
+    </style>
+
+
+
+
+
+    <style name="my_title">
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Subhead</item>
+        <item name="android:textColor">@color/my_title_text_color</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+
+    <style name="input_label" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/input_label_color</item>
+    </style>
+
+
+
+    <style name="menu_item_label_appearance" parent="@style/TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+    </style>
+
+    <style name="input_custom_label">
+        <item name="android:textColor">@color/input_label_color</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <color name="my_title_text_color">@color/primary</color>
+    <color name="splash_background_login">@color/secondary_50</color>
+
+    <!--    APPBAR -->
+    <style name="Appbar" parent="Widget.Design.AppBarLayout">
+        <item name="colorPrimary">@color/white</item>
+        <item name="contentScrim">@color/primary_50</item>
+        <item name="scrimBackground">@color/primary_50</item>
+        <item name="titleTextColor">?attr/colorOnSurface</item>
+        <item name="background">@color/white</item>
+    </style>
+
+
+    <style name="Toolbar" parent="Widget.MaterialComponents.Toolbar.Primary">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Toolbar</item>
+        <item name="android:background">@color/white</item>
+        <item name="navigationIconTint">@color/primary</item>
+        <item name="contentScrim">@color/primary_50</item>
+        <item name="titleTextColor">@color/black</item>
+    </style>
+
+    <style name="ThemeOverlay.App.Toolbar" parent="">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/primary_50</item>
+        <item name="colorOnPrimary">@color/primary</item>
+    </style>
+
+
+</resources>

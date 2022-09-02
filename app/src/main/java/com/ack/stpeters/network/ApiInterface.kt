@@ -1,5 +1,7 @@
 package com.ack.stpeters.network
 
+import androidx.lifecycle.LiveData
+import com.ack.stpeters.model.FetchMembers
 import com.ack.stpeters.model.Member
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
@@ -20,6 +22,10 @@ interface ApiInterface {
 
     @POST("stpetersapi/v1/member")
     suspend fun saveMembers(@Body member: Member): Member
+
+    @GET("stpetersapi/v1/member")
+    suspend fun getMembers(): List<FetchMembers>
+
 
     //We need to prepare a custom OkHttp client because need to use our custom call interceptor.
     // to be able to authenticate our requests.

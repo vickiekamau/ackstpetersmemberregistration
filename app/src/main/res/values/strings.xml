@@ -26,6 +26,8 @@
     <string name="personal_info">Personal Information</string>
     <string name="church_info">Church Information</string>
     <string name="career_info">Career Information</string>
+    <string name="days">Days</string>
+    <string name="date_of_birth">Date Of Birth</string>
 
 
     <string-array name="gender">

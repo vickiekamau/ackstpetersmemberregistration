@@ -18,10 +18,7 @@ class AddMemberViewModel(application: Application) : AndroidViewModel(applicatio
     val savedMemberStatus: LiveData<Resource<String>> = _savedMemberStatus
 
 
-
-
-
-    fun saveMember(member: Member){
+    /**fun saveMember(member: Member){
         viewModelScope.launch {
             _savedMemberStatus.postValue(Resource.loading(null))
             try {
@@ -38,7 +35,7 @@ class AddMemberViewModel(application: Application) : AndroidViewModel(applicatio
             }
         }
 
-    }
+    }*/
      fun saveMembersData(member: Member){
          save = CoroutineScope(Dispatchers.IO).launch {
              _savedMemberStatus.postValue(Resource.loading(null))

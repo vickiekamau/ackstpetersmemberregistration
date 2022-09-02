@@ -1,5 +1,6 @@
 package com.ack.stpeters.model
 
+import androidx.room.Entity
 import com.google.gson.annotations.SerializedName
 
 data class Member(
@@ -43,13 +44,5 @@ data class Member(
 	val occupation: String,
 
 	@field:SerializedName("phoneNo")
-	val phoneNo: String,
-
-
-
-
-
-
-
-
+	val phoneNo: String
 	)

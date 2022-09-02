@@ -63,4 +63,6 @@
 
     <color name="status_bar">#f3eec1</color>
     <color name="navigation_bar">#ffffff</color>
+
+    <color name="color_background">#ffffff</color>
 </resources>
